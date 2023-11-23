@@ -1,0 +1,53 @@
+body{
+    background-color: #0f1f2c;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.clock{
+    height: 30rem;
+    width: 30rem;
+    border: 15px solid #56c3b7;
+    border-radius: 50%;
+}
+.hand{
+    position: relative;
+    border-radius: 5px;
+    background-color: white;
+    transform-origin: 100%;
+    transform: rotate(90deg); 
+}
+.sec{
+    width: 15rem;
+    height: 10px;
+    top: 38%;  
+    z-index: 3;
+    background-color:  #8f2f19;
+}
+.min{
+    width: 13rem;
+    height: 10px;
+    top: 36%;  
+    left: 6.7%;
+    z-index: 2;
+}
+.hour{
+    width: 10rem;
+    height: 10px;
+    top: 34%;  
+    left: 16.5%;
+    z-index: 1;
+    background-color:  #5a5a5a;
+}
+.title{
+    position: relative;
+    top: 10%;
+    left: 40%;
+    color: #56c3b7;
+    margin: 0 0 0 0;
+    z-index: 0;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}

@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Analog clock</title>
+</head>
+<body>
+    <div class="container">
+        <div class="clock">
+            <div class="title"><p>Satwik's Clock</p></div>
+            <div class="hand sec"></div>
+            <div class="hand min"></div>
+            <div class="hand hour"></div>
+        </div>
+    </div>
+
+    <script>
+        var secHand=document.querySelector(".sec");
+        var minHand=document.querySelector(".min");
+        var hourHand=document.querySelector(".hour");
+
+        function setDate(){
+            const now=new Date();
+            const sec=now.getSeconds();
+            const min=now.getMinutes();
+            const hour= now.getHours();
+            console.log(sec," ",min," ",hour);
+            var secDeg=(sec/60)*360 +90;
+            var minDeg= (min/60)*360 +90;
+            var hDeg= (hour/12)*360 +90;
+            secHand.style.transform=`rotate(${secDeg}deg)`;
+            minHand.style.transform=`rotate(${minDeg}deg)`;
+            hourHand.style.transform=`rotate(${hDeg}deg)`;
+
+        }
+        setInterval(setDate,1000)
+
+    </script>
+</body>
+</html>
